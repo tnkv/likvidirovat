@@ -16,7 +16,7 @@ def likvidirovat(input_bytes) -> bytes:
     diagonal_length = int(math.sqrt((width ** 2) + (height ** 2)))
     diagonal_to_use = diagonal_length * DIAGONAL_PERCENTAGE
     font_size = int(diagonal_to_use / (message_length / FONT_RATIO))
-    font = ImageFont.truetype('../resources/impact.ttf', font_size)
+    font = ImageFont.truetype('src/resources/impact.ttf', font_size)
 
     mark_width, mark_height = font.getsize(text_to_be_rotated)
     watermark = Image.new('RGBA', (mark_width, mark_height), (0, 0, 0, 0))
